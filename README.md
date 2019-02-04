@@ -1,5 +1,5 @@
 # Features!
-build on node.js using Expressjs + Knex
+build on node.js using Express + Knex
 
 ### Plugin
 - Cookie-session
@@ -11,7 +11,7 @@ build on node.js using Expressjs + Knex
 - Knex (mysql2)
 
 ### Installation
-Clone the repo
+Clone this repo
 
 then use command:
 ```sh
