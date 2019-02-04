@@ -4,7 +4,11 @@ build on node.js using Expressjs + Knex
 ### Plugin
 - Cookie-session
 - Cors
-- Knex
+- Body-parser
+- multer (file upload)
+
+### Database
+- Knex (mysql2)
 
 ### Installation
 Clone the repo
