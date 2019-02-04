@@ -1,7 +1,7 @@
-# backend_template
+# Features!
 build on node.js using Expressjs + Knex
 
-### Features!
+### Plugin
 - Cookie-session
 - Cors
 - Knex
