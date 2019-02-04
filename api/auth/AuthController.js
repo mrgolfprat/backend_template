@@ -1,7 +1,7 @@
 /* สําหรับสร้าง Controller */
 
 const { success, failed } = require('../../config/response')
-
+const { set_cookie, remove_cookie } = require('../../config/cookie_action')
 const AuthModel = require('./AuthModel')
 const bcrypt = require('bcrypt')
 
@@ -34,12 +34,18 @@ class AuthController {
       if (!checkPassword) {
         return failed(res, 'username or password invalid')
       }
-      req.session = { user_id: userData.user_id }
+
+      set_cookie(req, { user_id: userData.user_id })
       success(res, result)
 
     } catch (error) {
       failed(res, 'login failed')
     }
+  }
+
+  logout(req, res) {
+    remove_cookie(req)
+    success(res, 'logout success')
   }
 
 }

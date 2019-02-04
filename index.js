@@ -7,7 +7,7 @@ const path = require('path')
 
 const app = express()
 const version = '/api/v1'
-const port = process.env.PORT || 3104
+const port = process.env.PORT || 3108
 
 // cors
 const whitelist = [
@@ -18,7 +18,7 @@ const whitelist = [
 
 const corsOption = {
   origin: (origin, cb) => {
-    debug('origin %o', origin)
+    console.log('origin ', origin)
     if (whitelist.indexOf(origin) !== -1) {
       cb(null, true)
     } else {
